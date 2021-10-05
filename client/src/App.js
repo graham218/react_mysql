@@ -35,6 +35,8 @@ function App() {
         <input type="number" onChange={(event)=>setWage(event.target.value)}/>
         <button onClick={addEmployee}>Add Employee</button>
       </div>
+      ====================================================================
+      <button>Show Employees</button>
     </div>
   );
 }

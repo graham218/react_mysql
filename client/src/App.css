@@ -15,11 +15,11 @@
   padding-left: 18px;
   margin: 5px;
 }
-.information button{
+button{
   width: 150px;
   height: 40px;
   margin-top: 15px;
 }
-.information button:hover{
+button:hover{
   cursor: progress;
 }
