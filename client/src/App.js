@@ -45,7 +45,7 @@ function App() {
       </div>
       ====================================================================
       <div className="emloyees">
-        <button>Show Employees</button>
+        <button onClick={getEmployees}>Show Employees</button>
       </div>
       
     </div>
