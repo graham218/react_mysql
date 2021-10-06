@@ -8,6 +8,8 @@ function App() {
   const [country, setCountry]=useState("");
   const [position, setPosition]=useState("");
   const [wage, setWage]=useState(0); 
+
+  const [employeeList, setEmployeeList]=useState([]);
   
   const addEmployee=()=>{
     Axios.post('http://localhost:3001/create',{
@@ -37,7 +39,7 @@ function App() {
       </div>
       ====================================================================
       <div className="emloyees">
-      <button>Show Employees</button>
+        <button>Show Employees</button>
       </div>
       
     </div>
