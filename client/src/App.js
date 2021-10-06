@@ -22,6 +22,12 @@ function App() {
       console.log("Success");
     });
   }
+
+  const getEmployees=()=>{
+    Axios.get('http://localhost:3001/employees').then((response)=>{
+      console.log(response);
+    });
+  }
   return (
     <div className="App">
       <div className="information">
