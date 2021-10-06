@@ -29,3 +29,17 @@ button:hover{
   align-items: center;
   width: 100px;
 }
+
+.employee{
+  width: 700px;
+  height: 220;
+  background-color: cadetblue;
+  border: 1px solid black;
+  margin: 10px;
+  display: flex;
+  padding: 10px;
+}
+
+.employee h3{
+  margin: 20px;
+}
