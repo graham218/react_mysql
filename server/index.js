@@ -46,5 +46,5 @@ app.get('/employees',(req, res)=>{
 });
 
 app.listen(3001, ()=>{
-    console.log("Hey, your server is running on port 3001")
+    console.log("Hey, your server is running on port 3001");
 });
