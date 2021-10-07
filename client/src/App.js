@@ -30,7 +30,12 @@ function App() {
   }
 
   const updateEmployeeWage=(id)=>{
-    Axios.put('http://localhost:3001/update', {wage: newWage, id:id})
+    Axios.put('http://localhost:3001/update', {wage: newWage, id:id}).then((response)=>{
+      setEmployeeList(employeeList.map((val)=>{
+        return val.id==id? {id: val.id, name: val.name, country: val.country,
+           age: val.age, posistion: val.posistion, wage: newWage}: val
+      }))
+    })
   }
   return (
     <div className="App">
@@ -62,7 +67,7 @@ function App() {
               </div>
               <div>
                 <input type="text" placeholder="20000....." onChange={(event)=>setNewWage(event.target.value)}/>
-                <button onClick={()=>{updateEmployeeWage(id)}}>Update</button>
+                <button onClick={()=>{updateEmployeeWage(val.id)}}>Update</button>
               </div>
             </div>
           );
