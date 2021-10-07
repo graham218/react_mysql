@@ -45,6 +45,14 @@ app.get('/employees',(req, res)=>{
     );
 });
 
+app.put('/update',(req, res)=>{
+    const id=req.body.id;
+    const wage=req.body.wage;
+    db.query(
+        "update employees set wage=? where id=?",[wage]
+    );
+});
+
 app.listen(3001, ()=>{
     console.log("Hey, your server is running on port 3001");
 });
