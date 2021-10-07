@@ -37,6 +37,10 @@ function App() {
       }))
     })
   }
+
+  const deleteEmployee=(id)=>{
+    Axios.delete(`http://localhost:3001/delete/${id}`)
+  }
   return (
     <div className="App">
       <div className="information">
@@ -68,6 +72,7 @@ function App() {
               <div>
                 <input type="text" placeholder="20000....." onChange={(event)=>setNewWage(event.target.value)}/>
                 <button onClick={()=>{updateEmployeeWage(val.id)}}>Update</button>
+                <button onClick={()=>{deleteEmployee(val.id)}}>Delete</button>
               </div>
             </div>
           );
